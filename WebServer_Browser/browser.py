@@ -46,7 +46,7 @@ class MainWindow(QMainWindow):
         back_btn = QAction("Back", self)
 
         # setting status tip
-        back_btn.setStatusTip("Back to previous page")
+        back_btn.setStatusTip("الصفحة السابقة ")
 
         # adding action to the back button
         # making browser go back
@@ -57,7 +57,7 @@ class MainWindow(QMainWindow):
 
         # similarly for forward action
         next_btn = QAction("Forward", self)
-        next_btn.setStatusTip("Forward to next page")
+        next_btn.setStatusTip("الصفحة التالية")
 
         # adding action to the next button
         # making browser go forward
@@ -66,7 +66,7 @@ class MainWindow(QMainWindow):
 
         # similarly for reload action
         reload_btn = QAction("Reload", self)
-        reload_btn.setStatusTip("Reload page")
+        reload_btn.setStatusTip("إعادة تحميل")
 
         # adding action to the reload button
         # making browser to reload
@@ -75,7 +75,7 @@ class MainWindow(QMainWindow):
 
         # similarly for home action
         home_btn = QAction("Home", self)
-        home_btn.setStatusTip("Go home")
+        home_btn.setStatusTip("الصفحة الرئيسية")
         home_btn.triggered.connect(self.navigate_home)
         navtb.addAction(home_btn)
 
@@ -93,7 +93,7 @@ class MainWindow(QMainWindow):
 
         # adding stop action to the tool bar
         stop_btn = QAction("Stop", self)
-        stop_btn.setStatusTip("Stop loading current page")
+        stop_btn.setStatusTip("إلغاء التحميل")
 
         # adding action to the stop button
         # making browser to stop
@@ -106,7 +106,7 @@ class MainWindow(QMainWindow):
     # method for updating the title of the window
     def update_title(self):
         title = self.browser.page().title()
-        self.setWindowTitle("% s - Geek Browser" % title)
+        self.setWindowTitle("% s - متصفح زاهر " % title)
 
     # method called by the home action
     def navigate_home(self):
@@ -143,7 +143,7 @@ class MainWindow(QMainWindow):
 app = QApplication(sys.argv)
 
 # setting name to the application
-app.setApplicationName("Geek Browser")
+app.setApplicationName("ZaherWebBrowser")
 
 # creating a main window object
 window = MainWindow()
